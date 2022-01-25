@@ -15,14 +15,15 @@ function userPrompts() {
   var length = prompt("How many charaters? Choose number between 8 and 128");
   
   // Set length to setInteger()
-    // var lnt lengthEl {
-    //   toString.valueOf(min(8),max(128));
-    }
-
-    // if user doesnt pick a number
-         if (isNaN(lengthEL)) {
-          return 'Alert Alert Alert, pick a numbaaa!';
-        }
+  if (
+    isNaN(parseInt(length)) ||
+    parseInt(length) < 8 ||
+    parseInt(length) > 128
+  ) 
+  {
+    return 'Alert Alert Alert, pick a numbaaa!';
+  }
+      
 
   var userLower = confirm("Would you like to incluse lowercase?");
   var userNumbers = confirm("Would you like to include numbers?");
