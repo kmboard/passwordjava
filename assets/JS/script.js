@@ -8,7 +8,8 @@ var uppercaseEl = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', '
 var lowercaseEl = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'q', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
 var numbersEl = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
 var symbolsEl = ['@', '%', '+', '\\', '/', "'", '!', '#', '$', '^', '?', ':', ',', ')', '(', '}', '{', ']', '[', '~', '-', '_', '.'];
-
+var lengthEl = length;
+console.log ("length");
 
 // Prompts
 function userPrompts() {
@@ -81,11 +82,10 @@ function generatePassword() {
     console.log(chosenChars)
   }
 
-  var lengthEl = length;
  
-  function lengthEl ()  {
-  for (let i = 0; i < length; i++) {
-    var randomChar = randomChar + chosenChars.concat(Math.floor(Math.random() * length));
+  function length ()  {
+  for (var i = 0; i < length; i++) {
+    var length = Math.floor(Math.random() * chosenChars.length);
     // finalPass.push(randomChar)
   
   }
@@ -93,10 +93,7 @@ function generatePassword() {
 }
     
   return chosenChars;
-  console.log ("final pass");
 
-  generatePassword()
-  
 }
 
 
