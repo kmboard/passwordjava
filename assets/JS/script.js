@@ -51,11 +51,12 @@ function userPrompts() {
   return promptObj;
 }
 
+
 // creates function
 function generatePassword() {
   var promptAnswers = userPrompts();
   console.log("promptsAnswers");
-  chosenChars = []
+  chosenChars = [];
 
   if (promptAnswers.userLower) {
     chosenChars += chosenChars.concat(lowercaseEl)
@@ -76,24 +77,21 @@ function generatePassword() {
     chosenChars += chosenChars.concat(symbolsEl)
     console.log(chosenChars)
   }
+  
    
-  return chosenChars;
+var passLength = parseInt(promptAnswers.length);
+  var finalPassword = "";
+  for(var i = 0; i <passLength; i++) {
+    finalPassword += Math.floor(Math.random() * chosenChars.length);
+    var randomEl = chosenChars.At(finalPassword);
+
+  }
+  return finalPassword;
 }
 
-
-function getlength() { 
-  console.log ("length");
-  for (var i = 0; i < length; i++){
-  var chosenlength = parseInt * Math.floor(Math.random());
-  }
-
-  return chosenlength;
- }
-
-
 function writePassword() {
+
   var password = generatePassword();
-  var chosenlength = getlength();
   var passwordText = document.querySelector("#password");
   passwordText.value = password;
 }
