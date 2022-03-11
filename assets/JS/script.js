@@ -76,14 +76,19 @@ function generatePassword() {
   if (promptAnswers.userSymbols) {
     chosenChars += chosenChars.concat(symbolsEl)
     console.log(chosenChars)
-  }
+  }7
   
    
 var passLength = parseInt(promptAnswers.length);
   var finalPassword = "";
+  var randomEl = "";
   for(var i = 0; i <passLength; i++) {
-    finalPassword += Math.floor(Math.random() * chosenChars.length);
-    var randomEl = chosenChars.At(finalPassword);
+    randomEl += chosenChars.charAt(Math.floor(Math.random()));
+    finalPassword += randomEl * passLength;
+
+    // finalPassword += Math.floor(Math.random());
+    // var randomEl = charAt() * chosenChars;
+    // finalPassword += randomEl(Math.floor(Math.random()));
 
   }
   return finalPassword;
@@ -98,3 +103,5 @@ function writePassword() {
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
+
+
