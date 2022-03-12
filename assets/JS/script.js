@@ -76,23 +76,27 @@ function generatePassword() {
   if (promptAnswers.userSymbols) {
     chosenChars += chosenChars.concat(symbolsEl)
     console.log(chosenChars)
-  }7
+  }
   
-   
 var passLength = parseInt(promptAnswers.length);
   var finalPassword = "";
   var randomEl = "";
   for(var i = 0; i <passLength; i++) {
-    randomEl += chosenChars.charAt(Math.floor(Math.random()));
-    finalPassword += randomEl * passLength;
+    randomIndex = Math.floor(Math.random() * passLength);
+    finalPassword += chosenChars[randomIndex];
+  }
+
+  // for(var i = 0; i <passLength; i++) {
+  //   randomEl += chosenChars.charAt(Math.floor(Math.random()));
+  //   finalPassword += randomEl * passLength;
 
     // finalPassword += Math.floor(Math.random());
     // var randomEl = charAt() * chosenChars;
     // finalPassword += randomEl(Math.floor(Math.random()));
 
-  }
   return finalPassword;
 }
+
 
 function writePassword() {
 
